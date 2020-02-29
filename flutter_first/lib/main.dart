@@ -8,7 +8,7 @@ void main() {
       home: new Scaffold(
         appBar: AppBar(
           title: Text(
-            "Flutter Dersleri",
+            "Flutter",
             style: TextStyle(fontSize: 24.0, color: Colors.white),
           ),
         ),
@@ -21,13 +21,11 @@ void main() {
             color: Colors.white,
           ),
         ),
-        body: Container(
+        body: Center(
+            child: Container(
           color: Colors.cyan,
-            child: Center(
-                child: Text(
-          "Flutter",
-          textAlign: TextAlign.center,
-        ))),
+          child: Text("Flutter CheatSheet", style: TextStyle(fontSize: 30),),
+        )),
       ),
     ),
   );
