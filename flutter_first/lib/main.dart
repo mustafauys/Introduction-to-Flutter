@@ -21,49 +21,86 @@ void main() {
               color: Colors.white,
             ),
           ),
-          body: Container(
-            color: Colors.cyan,
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                  child: Container(
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 64,
-                      color: Colors.yellow,
-                    ),
-                    color: Colors.orange.shade200,
+          body: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(2),
+                    color: Colors.cyan.shade100,
+                    child: Text("D", style: TextStyle(fontSize: 24),),
                   ),
-                  flex: 2,
-                ),
-                Expanded(
-                  child: Container(
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 64,
-                      color: Colors.yellow,
-                    ),
-                    color: Colors.purple.shade200,
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(2),
+                    color: Colors.cyan.shade200,
+                    child: Text("A", style: TextStyle(fontSize: 24),),
                   ),
-                  flex: 4,
-                ),
-                Expanded(
-                  child: Container(
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 64,
-                      color: Colors.yellow,
-                    ),
-                    color: Colors.blue.shade200,
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(2),
+                    color: Colors.cyan.shade300,
+                    child: Text("R", style: TextStyle(fontSize: 24),),
                   ),
-                  flex: 2,
-                ),
-
-              ],
-            ),
-          )),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(2),
+                    color: Colors.cyan.shade400,
+                    child: Text("T", style: TextStyle(fontSize: 24),),
+                  ),
+                ],
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade200,
+                child: Text("E", style: TextStyle(fontSize: 24),),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade200,
+                child: Text("R", style: TextStyle(fontSize: 24),),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade300,
+                child: Text("S", style: TextStyle(fontSize: 24),),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade400,
+                child: Text("L", style: TextStyle(fontSize: 24),),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade500,
+                child: Text("E", style: TextStyle(fontSize: 24),),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade600,
+                child: Text("R", style: TextStyle(fontSize: 24),),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(2),
+                color: Colors.orange.shade700,
+                child: Text(" İ", style: TextStyle(fontSize: 24),),
+              ),
+            ],
+          )
+      ),
     ),
   );
 }
