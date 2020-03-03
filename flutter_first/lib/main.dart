@@ -27,51 +27,81 @@ void main() {
                 "Resim Ve Buton Türleri",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
+              IntrinsicHeight(child:
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.red.shade200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Image.asset("assets/images/mustafa.jpg"),
-                        Text("Asset Image"),
-                      ],
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Image.asset("assets/images/mustafa.jpg"),
+                          Text("Asset Image"),
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.red.shade200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Image.network(""),
-                        Text("Network"),
-                      ],
+
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Image.asset("assets/images/mustafa.jpg"),
+                          Text("Network Image"),
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.red.shade200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        CircleAvatar(
-                        child: Text("Ali"),
-                          backgroundColor: Colors.purple,
-                          foregroundColor: Colors.orange,
-                        ),
-                        Text("Circle Avatar"),
-                      ],
+
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          CircleAvatar(
+                            child: Text("Ali"),
+                            backgroundColor: Colors.purple,
+                            radius: 30,
+                            foregroundColor: Colors.orange,
+                          ),
+                          Text("Circle Avatar"),
+                        ],
+                      ),
                     ),
                   )
+
                 ],
-              )
+              ),
+              ),
+
+              IntrinsicHeight(child:
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          FadeInImage.assetNetwork(placeholder: "assets/images/loading.gif", image: "assets/images/mustafa.jpg"),
+                          Text("Fadein Image"),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              ),
             ],
           )),
     ),
