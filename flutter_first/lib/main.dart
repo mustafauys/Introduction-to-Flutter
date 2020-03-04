@@ -93,8 +93,46 @@ void main() {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          FadeInImage.assetNetwork(placeholder: "assets/images/loading.gif", image: "assets/images/mustafa.jpg"),
+                          FadeInImage.assetNetwork(
+                              placeholder: "assets/images/loading.gif",
+                              image: "assets/images/mustafa.jpg"),
                           Text("Fadein Image"),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          FlutterLogo(size: 60,
+                            colors: Colors.orange,
+                            style: FlutterLogoStyle.horizontal,
+                            textColor: Colors.black,),
+                          Text("Flutter Logo"),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Expanded(
+                            child: Placeholder(
+                              color: Colors.red,
+                              strokeWidth: 6,),
+                          ),
+
+                          Text("Placeholder Widget"),
                         ],
                       ),
                     ),
