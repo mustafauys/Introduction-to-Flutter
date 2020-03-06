@@ -9,6 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        /*textTheme: TextTheme(
+          display1: TextStyle(fontSize: 12),
+        ),
+       */
         primarySwatch: Colors.blue,
       ),
       title: "MaterialApp Title",
@@ -30,11 +34,11 @@ class MyHomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     debugPrint("MyHomePage Create State Tetiklendi");
-    return MyHomePageState();
+    return _MyHomePageState();
   }
 }
 
-class MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> {
 
   MyHomePageState() {
     debugPrint("MyHomePageState Constructor Tetiklendi");
@@ -49,7 +53,7 @@ class MyHomePageState extends State<MyHomePage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
-              sayacDegeriniArttir();
+              _sayacDegeriniArttir();
               debugPrint("Sayaç Değeri Arttırıldı Set State Çağrıldı");
             });
 
@@ -60,20 +64,38 @@ class MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Butona Basılma Sayısı :"),
+              RaisedButton(child: Text("Arttır"),color: Colors.green, onPressed: (){
+                _sayacDegeriniArttir();
+              },),
               Text(
                 "${widget.sayac}",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.display1.copyWith(
+                  color: widget.sayac < 0 ? Colors.red : Colors.green
+                )
               ),
+              RaisedButton(child: Text("Azalt"),color: Colors.red, onPressed: (){
+                _sayacDegeriniAzalt();
+              },),
             ],
           ),
         ),
       );
     }
 
-  void sayacDegeriniArttir() {
-    widget.sayac++;
-    debugPrint("Sayaç Değeri : ${widget.sayac}");
+  void _sayacDegeriniArttir() {
+    setState(() {
+      widget.sayac++;
+      debugPrint("Sayaç Değeri : ${widget.sayac}");
+    });
+
+  }
+
+  void _sayacDegeriniAzalt() {
+    setState(() {
+      widget.sayac--;
+      debugPrint("Sayaç Değeri : ${widget.sayac}");
+    });
+
   }
 }
 
