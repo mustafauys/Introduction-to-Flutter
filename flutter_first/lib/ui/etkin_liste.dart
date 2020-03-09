@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class EtkinListe extends StatelessWidget {
 
@@ -31,6 +32,29 @@ class EtkinListe extends StatelessWidget {
            title: Text(tumOgrenciler[index]._isim),
            subtitle: Text(tumOgrenciler[index]._aciklama),
            trailing: Icon(Icons.add),
+           onTap: () {
+            debugPrint("Seçilen Eleman $index");
+            Fluttertoast.showToast(
+                msg: "Seçilen Eleman $index",
+                toastLength: Toast.LENGTH_LONG,
+                gravity: ToastGravity.BOTTOM,
+                timeInSecForIos: 1,
+                textColor: Colors.black,
+                fontSize: 16.0
+            );
+           },
+           onLongPress: () {
+             debugPrint("Uzun Basılan Eleman $index");
+             Fluttertoast.showToast(
+                 msg: "Uzun Basılan Eleman $index",
+                 toastLength: Toast.LENGTH_LONG,
+                 gravity: ToastGravity.BOTTOM,
+                 timeInSecForIos: 1,
+                 backgroundColor: Colors.red,
+                 textColor: Colors.white,
+                 fontSize: 16.0
+             );
+           },
          ),
        );
       }
