@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first/ui/etkin_liste.dart';
 import 'ui/liste.dart';
 
 void main() {
@@ -10,7 +11,7 @@ void main() {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text("Liste Konusu", style: TextStyle(color: Colors.white),),),
-        body: ListeKonusu(),
+        body: EtkinListe(),
       ),
   ));
 }
