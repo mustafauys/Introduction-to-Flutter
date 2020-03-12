@@ -5,20 +5,21 @@ class GridViewOrnek extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      itemCount: 100,
+      itemCount: 20,
       gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (BuildContext context, int index) {
-        return Container(
+        return GestureDetector(
+          child: Container(
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.orange, width: 10),
+                border: Border.all(color: Colors.orange, width: 10),
                 //borderRadius: new BorderRadius.all(new Radius.circular(20)),
                 boxShadow: [
                   new BoxShadow(
-                    color: Colors.red,
-                    offset: new Offset(10, 5),
-                    blurRadius: 20
+                      color: Colors.red,
+                      offset: new Offset(10, 5),
+                      blurRadius: 20
                   )
                 ],
                 shape: BoxShape.circle,
@@ -35,11 +36,18 @@ class GridViewOrnek extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Merhaba Flutter $index",
+                "Flutter $index",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: Colors.white),
               ),
-            ));
+            ),
+          ),
+
+          onTap: () => debugPrint("Flutter $index tıklanıldı"),
+          onDoubleTap: () => debugPrint("Flutter $index çift tıklanıldı"),
+          onLongPress: () => debugPrint("Flutter $index uzun basıldı"),
+          onHorizontalDragStart: (e) => debugPrint("Flutter $index uzun basıldı $e"),
+        );
       },
     );
   }
