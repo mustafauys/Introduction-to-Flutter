@@ -8,13 +8,13 @@ class CollapsableToolbarOrnek extends StatelessWidget {
       slivers: <Widget>[
         SliverAppBar(
           backgroundColor: Colors.red,
-          expandedHeight: 100,
+          expandedHeight: 200,
           floating: false,
           pinned: true,
           snap: false,
           flexibleSpace: FlexibleSpaceBar(
             title: Text(
-              "Sliver App Bar",
+              "Custom ScrollView App",
               style: TextStyle(color: Colors.black),
             ),
             centerTitle: true,
@@ -24,6 +24,37 @@ class CollapsableToolbarOrnek extends StatelessWidget {
             ),
           ),
         ),
+
+        //Sabit elemanlarla bir satırda kaç eleman olacağını söylediğimiz grid türü
+        SliverGrid(
+          gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          delegate: SliverChildListDelegate(sabitListeElemanlari()),
+        ),
+
+        //Dinamik (Builder ile üretilen) elemanlarla bir satırda kaç eleman olacağını söylediğimiz grid türü
+        SliverGrid(
+          gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          delegate: SliverChildBuilderDelegate(_dinamikElemanUretenFonksiyon,
+              childCount: 6),
+        ),
+
+        //Dinamik (Builder ile üretilen) elemanlarla bir satırdaki bir elemanın max genişliğini söylediğimiz grid türü
+        SliverGrid(
+          gridDelegate:
+              SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 200),
+          delegate: SliverChildBuilderDelegate(_dinamikElemanUretenFonksiyon,
+              childCount: 6),
+        ),
+
+        SliverGrid.count(crossAxisCount: 6, children:
+          sabitListeElemanlari()
+        ,),
+
+        SliverGrid.extent(maxCrossAxisExtent: 300, children: sabitListeElemanlari(),),
+
+        //Statik elemanlı bir silver list view
         SliverPadding(
           padding: EdgeInsets.all(4),
           sliver: SliverList(
@@ -32,6 +63,8 @@ class CollapsableToolbarOrnek extends StatelessWidget {
             ),
           ),
         ),
+
+        //Elemanları builder ile oluşturulan list view
         SliverPadding(
           padding: EdgeInsets.all(10),
           sliver: SliverList(
@@ -40,9 +73,15 @@ class CollapsableToolbarOrnek extends StatelessWidget {
           ),
         ),
 
-        SliverFixedExtentList(delegate: SliverChildListDelegate(sabitListeElemanlari(),), itemExtent: 200,),
+        SliverFixedExtentList(
+            delegate: SliverChildListDelegate(sabitListeElemanlari()),
+            itemExtent: 200),
 
-        SliverFixedExtentList(delegate: SliverChildBuilderDelegate(_dinamikElemanUretenFonksiyon, childCount: 6), itemExtent: 50,),
+        SliverFixedExtentList(
+          delegate: SliverChildBuilderDelegate(_dinamikElemanUretenFonksiyon,
+              childCount: 6),
+          itemExtent: 50,
+        ),
       ],
     );
   }
