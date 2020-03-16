@@ -17,7 +17,7 @@ class ResimveButtonTurleri extends StatelessWidget {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.all(4),
-                  color: Colors.red.shade200,
+                  color: Colors.red.shade100,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
@@ -49,7 +49,7 @@ class ResimveButtonTurleri extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         child: Text("Ali"),
-                        backgroundColor: Colors.purple,
+                        backgroundColor: Colors.cyan,
                         radius: 30,
                         foregroundColor: Colors.orange,
                       ),
@@ -68,7 +68,7 @@ class ResimveButtonTurleri extends StatelessWidget {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.all(4),
-                  color: Colors.red.shade200,
+                  color: Colors.red.shade100,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
