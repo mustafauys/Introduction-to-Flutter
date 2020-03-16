@@ -43,9 +43,9 @@ class GridViewOrnek extends StatelessWidget {
             ),
           ),
 
-          onTap: () => debugPrint("Flutter $index tıklanıldı"),
-          onDoubleTap: () => debugPrint("Flutter $index çift tıklanıldı"),
-          onLongPress: () => debugPrint("Flutter $index uzun basıldı"),
+          onTap: () => debugPrint("Flutter $index tıklanıldı.."),
+          onDoubleTap: () => debugPrint("Flutter $index çift tıklanıldı.."),
+          onLongPress: () => debugPrint("Flutter $index uzun basıldı.."),
           onHorizontalDragStart: (e) => debugPrint("Flutter $index uzun basıldı $e"),
         );
       },
