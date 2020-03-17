@@ -90,7 +90,7 @@ class CollapsableToolbarOrnek extends StatelessWidget {
     return [
       Container(
         height: 100,
-        color: Colors.grey,
+        color: Colors.blue,
         alignment: Alignment.center,
         child: Text(
           "Sabit Liste Elemanı 1",
@@ -100,7 +100,7 @@ class CollapsableToolbarOrnek extends StatelessWidget {
       ),
       Container(
         height: 100,
-        color: Colors.teal,
+        color: Colors.cyan,
         alignment: Alignment.center,
         child: Text(
           "Sabit Liste Elemanı 2",
@@ -110,7 +110,7 @@ class CollapsableToolbarOrnek extends StatelessWidget {
       ),
       Container(
         height: 100,
-        color: Colors.blue,
+        color: Colors.black,
         alignment: Alignment.center,
         child: Text(
           "Sabit Liste Elemanı 3",
