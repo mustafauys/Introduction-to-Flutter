@@ -24,7 +24,7 @@ class EtkinListe extends StatelessWidget {
         itemBuilder: (context, index) {
           return Card(
             color:
-                index % 2 == 0 ? Colors.red.shade100 : Colors.orange.shade100,
+                index % 2 == 0 ? Colors.red.shade200 : Colors.orange.shade200,
             elevation: 4,
             child: ListTile(
               leading: Icon(Icons.perm_contact_calendar),
