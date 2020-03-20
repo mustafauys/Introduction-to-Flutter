@@ -14,7 +14,7 @@ class ListeKonusu extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       child: Card(
-                          color: Colors.yellow.shade200,
+                          color: Colors.red.shade100,
                           margin: EdgeInsets.all(10),
                           elevation: 10,
                           child: ListTile(
