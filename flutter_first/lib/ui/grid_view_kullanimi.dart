@@ -13,7 +13,7 @@ class GridViewOrnek extends StatelessWidget {
           child: Container(
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
-                border: Border.all(color: Colors.red, width: 10),
+                border: Border.all(color: Colors.cyan, width: 10),
                 //borderRadius: new BorderRadius.all(new Radius.circular(20)),
                 boxShadow: [
                   new BoxShadow(
