@@ -38,7 +38,7 @@ class GridViewOrnek extends StatelessWidget {
               child: Text(
                 "Flutter $index",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 24, color: Colors.white),
+                style: TextStyle(fontSize: 16, color: Colors.white),
               ),
             ),
           ),
