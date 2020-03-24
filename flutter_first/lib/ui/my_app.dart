@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget{
           appBar: AppBar(
             title: Text(
               "Flutter",
-              style: TextStyle(fontSize: 24.0, color: Colors.white),
+              style: TextStyle(fontSize: 16.0, color: Colors.white),
             ),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              debugPrint("FAB Tıklandı");
+              debugPrint("FAB Tıklanıldı..");
             },
             child: Icon(
               Icons.access_alarms,
