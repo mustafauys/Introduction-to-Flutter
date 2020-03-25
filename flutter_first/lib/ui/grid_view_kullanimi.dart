@@ -13,7 +13,7 @@ class GridViewOrnek extends StatelessWidget {
           child: Container(
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
-                border: Border.all(color: Colors.orange, width: 10),
+                border: Border.all(color: Colors.cyan, width: 10),
                 //borderRadius: new BorderRadius.all(new Radius.circular(20)),
                 boxShadow: [
                   new BoxShadow(
@@ -25,7 +25,7 @@ class GridViewOrnek extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.blue[100 * ((index + 1) % 8)],
                 gradient: LinearGradient(
-                    colors: [Colors.yellow, Colors.red],
+                    colors: [Colors.orange, Colors.red],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter),
                 image: DecorationImage(
@@ -38,14 +38,14 @@ class GridViewOrnek extends StatelessWidget {
               child: Text(
                 "Flutter $index",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(fontSize: 24, color: Colors.white),
               ),
             ),
           ),
 
-          onTap: () => debugPrint("Flutter $index tıklanıldı"),
-          onDoubleTap: () => debugPrint("Flutter $index çift tıklanıldı"),
-          onLongPress: () => debugPrint("Flutter $index uzun basıldı"),
+          onTap: () => debugPrint("Flutter $index tıklanıldı.."),
+          onDoubleTap: () => debugPrint("Flutter $index çift tıklanıldı.."),
+          onLongPress: () => debugPrint("Flutter $index uzun basıldı.."),
           onHorizontalDragStart: (e) => debugPrint("Flutter $index uzun basıldı $e"),
         );
       },
