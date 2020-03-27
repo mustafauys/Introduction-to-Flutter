@@ -48,7 +48,7 @@ class NavigasyonIslemleri extends StatelessWidget {
             ),
             RaisedButton(
               child: Text("D Sayfasına Git ve Gelirken Veri Getir"),
-              color: Colors.cyan,
+              color: Colors.orange,
               onPressed: () {
                 Navigator.push(
                   context,
