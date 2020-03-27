@@ -46,8 +46,59 @@ class NavigasyonIslemleri extends StatelessWidget {
                 );
               },
             ),
+            RaisedButton(
+              child: Text("D Sayfasına Git ve Gelirken Veri Getir"),
+              color: Colors.cyan,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DSayfasi()),).then((popOlayindanSonraGelenDeger) {
+                  debugPrint("Pop işleminden gelen deger $popOlayindanSonraGelenDeger");
+                }
+                );
+              },
+            ),
           ],
         )));
+  }
+}
+
+class DSayfasi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: () {
+        debugPrint("On Will Pop Çalıştı");
+        Navigator.pop(context, false);
+        return Future.value(false);
+      },
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              "D Sayfası",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "D SAYFASI",
+                    style: TextStyle(color: Colors.red, fontSize: 24),
+                  ),
+                  RaisedButton(
+                    color: Colors.purple,
+                    child: Text("Geri Dön ve Veri Gönder"),
+                    onPressed: () {
+                      Navigator.pop(context, true);
+                      //True demek ürün silindi
+                      //False ürün silinemedi veya kullanıcı vazgeçti
+                    },
+                  ),
+                ],
+              ))),
+    );
   }
 }
 
@@ -126,12 +177,12 @@ class CSayfasi extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-
             RaisedButton(
               color: Colors.purple,
               child: Text("A Sayfasına Git"),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ASayfasi()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ASayfasi()));
               },
             ),
           ],
