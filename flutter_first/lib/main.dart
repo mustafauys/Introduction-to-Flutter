@@ -9,11 +9,18 @@ import 'ui/liste.dart';
 void main() {
   runApp(MaterialApp(
       title: "Flutter",
+      routes: {
+        '/'      : (context) => NavigasyonIslemleri(),
+        '/CPage' : (context) => CSayfasi(),
+        '/DPage' : (context) => DSayfasi(),
+        '/GPage' : (context) => GSayfasi(),
+        '/FPage' : (context) => FSayfasi(),
+      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.orange,
             brightness: Brightness.light
       ),
-      home: NavigasyonIslemleri(),
+      //home: NavigasyonIslemleri(),
   ));
 }
