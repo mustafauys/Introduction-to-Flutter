@@ -9,13 +9,21 @@ import 'ui/liste.dart';
 void main() {
   runApp(MaterialApp(
       title: "Flutter",
+      
+      initialRoute: "CPage/DPage/FPage",
+
       routes: {
         '/'      : (context) => NavigasyonIslemleri(),
-        '/CPage' : (context) => CSayfasi(),
+        'CPage' : (context) => CSayfasi(),
         '/DPage' : (context) => DSayfasi(),
         '/GPage' : (context) => GSayfasi(),
         '/FPage' : (context) => FSayfasi(),
+        '/CPage/DPage' : (context) => DSayfasi(),
+        '/CPage/DPage/FPage' : (context) => FSayfasi(),
+
       },
+
+    onUnknownRoute: (RouteSettings settings) => MaterialPageRoute(builder: (context) => DSayfasi()),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.orange,
