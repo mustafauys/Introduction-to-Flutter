@@ -8,7 +8,7 @@ import 'ui/liste.dart';
 
 void main() {
   runApp(MaterialApp(
-      title: "Flutter",
+      title: "Flutter Öğren",
       
       initialRoute: "CPage/DPage/FPage",
 
