@@ -110,9 +110,9 @@ class FSayfasi extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "F SAYFASI",
-                  style: TextStyle(color: Colors.red, fontSize: 24),
+                  style: TextStyle(color: Colors.red, fontSize: 16),
                 ),
-                RaisedButton(child: Text("G Sayfasına Git"),
+                RaisedButton(child: Text("G SAYFASINA GİT"),
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, "/GPageb");
                     }),
