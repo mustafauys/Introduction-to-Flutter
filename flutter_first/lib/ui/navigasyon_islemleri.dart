@@ -52,22 +52,81 @@ class NavigasyonIslemleri extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DSayfasi()),).then((popOlayindanSonraGelenDeger) {
-                  debugPrint("Pop işleminden gelen deger $popOlayindanSonraGelenDeger");
-                }
-                );
+                  MaterialPageRoute(builder: (context) => DSayfasi()),
+                ).then((popOlayindanSonraGelenDeger) {
+                  debugPrint(
+                      "Pop işleminden gelen deger $popOlayindanSonraGelenDeger");
+                });
               },
             ),
-
             RaisedButton(
               child: Text("E Sayfasına Git ve Geri Gelme"),
               color: Colors.blueGrey,
               onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ESayfasi()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => ESayfasi()));
+              },
+            ),
+            RaisedButton(
+              child: Text("Liste Sayfasına Git"),
+              color: Colors.teal,
+              onPressed: () {
+                Navigator.pushNamed(context, "/ListeSayfasi");
               },
             ),
           ],
         )));
+  }
+}
+
+class ListeSinifi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Liste Sayfası",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        body: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, "/detay/$index");
+              },
+              child: Center(
+                  child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Liste Elemanı $index"),
+              )),
+            );
+          },
+          itemCount: 60,
+        ));
+  }
+}
+
+class ListeDetay extends StatelessWidget {
+
+  int tiklanilanIndex = 0;
+  ListeDetay(this.tiklanilanIndex);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Liste Detay Sayfası",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Center(
+          child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text("Liste Elemanı $tiklanilanIndex Tıklanıldı."),
+      )),
+    );
   }
 }
 
@@ -83,14 +142,14 @@ class GSayfasi extends StatelessWidget {
         ),
         body: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "G SAYFASI",
-                  style: TextStyle(color: Colors.red, fontSize: 24),
-                )
-              ],
-            )));
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "G SAYFASI",
+              style: TextStyle(color: Colors.red, fontSize: 24),
+            )
+          ],
+        )));
   }
 }
 
@@ -106,18 +165,19 @@ class FSayfasi extends StatelessWidget {
         ),
         body: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "F SAYFASI",
-                  style: TextStyle(color: Colors.red, fontSize: 16),
-                ),
-                RaisedButton(child: Text("G SAYFASINA GİT"),
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, "/GPageb");
-                    }),
-              ],
-            )));
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "F SAYFASI",
+              style: TextStyle(color: Colors.red, fontSize: 16),
+            ),
+            RaisedButton(
+                child: Text("G SAYFASINA GİT"),
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, "/GPageb");
+                }),
+          ],
+        )));
   }
 }
 
@@ -133,19 +193,19 @@ class ESayfasi extends StatelessWidget {
         ),
         body: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "E SAYFASI",
-                  style: TextStyle(color: Colors.red, fontSize: 24),
-                ),
-
-                RaisedButton(child: Text("F Sayfasına Git"),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "E SAYFASI",
+              style: TextStyle(color: Colors.red, fontSize: 24),
+            ),
+            RaisedButton(
+                child: Text("F Sayfasına Git"),
                 onPressed: () {
                   Navigator.pushNamed(context, "/FPage");
                 }),
-              ],
-            )));
+          ],
+        )));
   }
 }
 
@@ -167,23 +227,23 @@ class DSayfasi extends StatelessWidget {
           ),
           body: Center(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    "D SAYFASI",
-                    style: TextStyle(color: Colors.red, fontSize: 24),
-                  ),
-                  RaisedButton(
-                    color: Colors.purple,
-                    child: Text("Geri Dön ve Veri Gönder"),
-                    onPressed: () {
-                      Navigator.pop(context, true);
-                      //True demek ürün silindi
-                      //False ürün silinemedi veya kullanıcı vazgeçti
-                    },
-                  ),
-                ],
-              ))),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "D SAYFASI",
+                style: TextStyle(color: Colors.red, fontSize: 24),
+              ),
+              RaisedButton(
+                color: Colors.purple,
+                child: Text("Geri Dön ve Veri Gönder"),
+                onPressed: () {
+                  Navigator.pop(context, true);
+                  //True demek ürün silindi
+                  //False ürün silinemedi veya kullanıcı vazgeçti
+                },
+              ),
+            ],
+          ))),
     );
   }
 }
