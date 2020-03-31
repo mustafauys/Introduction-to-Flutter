@@ -20,8 +20,17 @@ void main() {
         '/FPage' : (context) => FSayfasi(),
         '/CPage/DPage' : (context) => DSayfasi(),
         '/CPage/DPage/FPage' : (context) => FSayfasi(),
-
+        '/ListeSayfasi' : (context) => ListeSinifi(),
       },
+
+    onGenerateRoute: (RouteSettings settings) {
+        List<String> pathElemanlari = settings.name.split("/"); // /detay/$index  /urun/detay/id
+
+        if (pathElemanlari[1] == 'detay') {
+          return MaterialPageRoute(builder: (context) => ListeDetay(int.parse(pathElemanlari[2])));
+        }
+        return null;
+    },
 
     onUnknownRoute: (RouteSettings settings) => MaterialPageRoute(builder: (context) => DSayfasi()),
       debugShowCheckedModeBanner: false,
