@@ -61,7 +61,7 @@ class NavigasyonIslemleri extends StatelessWidget {
             ),
             RaisedButton(
               child: Text("E Sayfasına Git ve Geri Gelme"),
-              color: Colors.blueGrey,
+              color: Colors.teal
               onPressed: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => ESayfasi()));
@@ -69,7 +69,7 @@ class NavigasyonIslemleri extends StatelessWidget {
             ),
             RaisedButton(
               child: Text("Liste Sayfasına Git"),
-              color: Colors.teal,
+              color: Colors.blueGrey,
               onPressed: () {
                 Navigator.pushNamed(context, "/ListeSayfasi");
               },
