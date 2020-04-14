@@ -4,16 +4,17 @@ import 'package:flutter_first/ui/etkin_liste.dart';
 import 'package:flutter_first/ui/grid_view_kullanimi.dart';
 import 'package:flutter_first/ui/navigasyon_islemleri.dart';
 import 'ui/liste.dart';
-
+import 'package:flutter_first/ui/form_islemleri.dart';
 
 void main() {
   runApp(MaterialApp(
       title: "Flutter Öğren",
       
-      initialRoute: "CPage/DPage/FPage",
+      initialRoute: "/formIslemleri",
 
       routes: {
         '/'      : (context) => NavigasyonIslemleri(),
+        '/formIslemleri' : (context) => FormIslemleri(),
         'CPage' : (context) => CSayfasi(),
         '/DPage' : (context) => DSayfasi(),
         '/GPage' : (context) => GSayfasi(),
@@ -40,4 +41,7 @@ void main() {
       ),
       //home: NavigasyonIslemleri(),
   ));
+}
+
+class FormIslemleri {
 }
