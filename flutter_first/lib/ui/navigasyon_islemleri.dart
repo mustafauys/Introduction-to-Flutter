@@ -12,7 +12,8 @@ class NavigasyonIslemleri extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        body: Center(
+        body: SingleChildScrollView(
+          child: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -61,7 +62,7 @@ class NavigasyonIslemleri extends StatelessWidget {
             ),
             RaisedButton(
               child: Text("E Sayfasına Git ve Geri Gelme"),
-              color: Colors.teal
+              color: Colors.blueGrey,
               onPressed: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => ESayfasi()));
@@ -74,8 +75,17 @@ class NavigasyonIslemleri extends StatelessWidget {
                 Navigator.pushNamed(context, "/ListeSayfasi");
               },
             ),
+
+            RaisedButton(
+              child: Text("Liste Sayfasına Git"),
+              color: Colors.yellowAccent.shade100,
+              onPressed: () {
+                Navigator.pushNamed(context, "/formIslemleri");
+              },
+            ),
           ],
-        )));
+        ),),
+        ),);
   }
 }
 
