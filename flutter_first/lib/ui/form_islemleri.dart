@@ -5,14 +5,28 @@ class FormIslemleri extends StatefulWidget {
   _FormIslemleriState createState() => _FormIslemleriState();
 }
 
-class _State extends State<> {
+class _FormIslemleriState extends State<FormIslemleri> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(title: Text("Input Islemleri"),),
-      body: Container(
+      body: ListView(
+        children: <Widget>[
+
+            TextField(),
+
+            Container(
+        margin: EdgeInsets.all(10),
+        width: double.infinity,
+        height: 200,
         color: Colors.teal.shade400,
+        child : Align(alignment: Alignment.center, child: Text("Merhaba Flutter")),
+      
       ),
+        ],
+        
+    ),
     );
   }
 }
