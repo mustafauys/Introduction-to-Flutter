@@ -61,7 +61,7 @@ class NavigasyonIslemleri extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text("E Sayfasına Git ve Geri Gelme"),
+              child: Text("E Sayfasına Git"),
               color: Colors.blueGrey,
               onPressed: () {
                 Navigator.pushReplacement(context,
