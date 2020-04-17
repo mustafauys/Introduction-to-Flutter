@@ -6,22 +6,108 @@ class FormIslemleri extends StatefulWidget {
 }
 
 class _FormIslemleriState extends State<FormIslemleri> {
+
+  String girilenMetin= "";
+  int maxLine = 1;
+  FocusNode _fNode;
+
+  @override
+  void initState() {
+    super.initState();
+    _fNode=FocusNode();
+    _fNode.addListener(() {
+        setState(() {
+       if(_fNode.hasFocus) {
+        maxLine = 3;
+    } else {
+      maxLine = 1;
+    }
+
+    });
+    });
+  }
+
+  @override
+  void dispose() {
+    _fNode.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(title: Text("Input Islemleri"),),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        FocusScope.of(context).requestFocus(_fNode);
+      }, child: Icon(Icons.edit),),
       body: ListView(
         children: <Widget>[
 
-            TextField(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                textInputAction: TextInputAction.done,
+                autofocus: false,
+                maxLines: maxLine,
+                decoration: InputDecoration(
+                  hintText: "Metni Buraya Başlık",
+                  labelText: "Başlık",
+                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+                  icon: Icon(Icons.edit),
+                  prefixIcon: Icon(Icons.done),
+                  suffixIcon: Icon(Icons.add),
+                  filled: true,
+                  fillColor: Colors.red.shade50,
+                ),
+                focusNode: _fNode,
+                maxLength: 20,
+                maxLengthEnforced: true,
+                onChanged: (String s) =>debugPrint("On Change: $s"),
+                onSubmitted: (String s) {
+                  debugPrint("On Submit: $s");
+                  girilenMetin=s;
+                },
+                cursorColor: Colors.pink,
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                textInputAction: TextInputAction.done,
+                autofocus: false,
+                maxLines: 1,
+                decoration: InputDecoration(
+                  hintText: "Metni Buraya Başlık",
+                  labelText: "Başlık",
+                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+                  icon: Icon(Icons.edit),
+                  prefixIcon: Icon(Icons.done),
+                  suffixIcon: Icon(Icons.add),
+                  filled: true,
+                  fillColor: Colors.red.shade50,
+                ),
+                maxLength: 20,
+                maxLengthEnforced: true,
+                onChanged: (String s) =>debugPrint("On Change: $s"),
+                onSubmitted: (String s) {
+                  debugPrint("On Submit: $s");
+                  girilenMetin=s;
+                },
+                cursorColor: Colors.pink,
+              ),
+            ),
 
             Container(
         margin: EdgeInsets.all(10),
         width: double.infinity,
         height: 200,
         color: Colors.teal.shade400,
-        child : Align(alignment: Alignment.center, child: Text("Merhaba Flutter")),
+        child : Align(alignment: Alignment.center,
+        child: Text(girilenMetin)),
       
       ),
         ],
