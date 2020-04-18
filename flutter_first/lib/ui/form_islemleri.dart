@@ -45,7 +45,7 @@ class _FormIslemleriState extends State<FormIslemleri> {
         children: <Widget>[
 
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(8.0),
               child: TextField(
                 keyboardType: TextInputType.number,
                 textInputAction: TextInputAction.done,
