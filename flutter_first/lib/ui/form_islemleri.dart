@@ -52,7 +52,7 @@ class _FormIslemleriState extends State<FormIslemleri> {
                 autofocus: false,
                 maxLines: maxLine,
                 decoration: InputDecoration(
-                  hintText: "Metni Buraya Yazalım",
+                  hintText: "Metni Buraya Başlık",
                   labelText: "Başlık",
                   border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                   icon: Icon(Icons.edit),
