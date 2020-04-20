@@ -83,7 +83,7 @@ class _FormIslemleriState extends State<FormIslemleri> {
                 decoration: InputDecoration(
                   hintText: "Metni Buraya Başlık",
                   labelText: "Başlık",
-                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(8))),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                   icon: Icon(Icons.edit),
                   prefixIcon: Icon(Icons.done),
                   suffixIcon: Icon(Icons.add),
