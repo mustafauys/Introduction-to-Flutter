@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/ui/custom_scroll_ve_slivers.dart';
 import 'package:flutter_first/ui/etkin_liste.dart';
-import 'package:flutter_first/ui/form_islemleri.dart';
 import 'package:flutter_first/ui/grid_view_kullanimi.dart';
 import 'package:flutter_first/ui/navigasyon_islemleri.dart';
+import 'package:flutter_first/ui/text_field_ozellikleri.dart';
 import 'ui/liste.dart';
 
 void main() {
   runApp(MaterialApp(
       title: "Flutter Öğren",
       
-      initialRoute: "/FormIslemleri",
+      initialRoute: "/textFieldIslemleri",
 
       routes: {
         '/'      : (context) => NavigasyonIslemleri(),
-        '/formIslemleri' : (context) => FormIslemleri(),
+        '/textFieldIslemleri' : (context) => TextFieldIslemleri(),
         'CPage' : (context) => CSayfasi(),
         '/DPage' : (context) => DSayfasi(),
         '/GPage' : (context) => GSayfasi(),
