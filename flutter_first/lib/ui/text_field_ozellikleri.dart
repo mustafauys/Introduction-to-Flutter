@@ -96,7 +96,7 @@ class _TextFieldIslemleriState extends State<TextFieldIslemleri> {
                   debugPrint("On Submit: $s");
                   girilenMetin=s;
                 },
-                cursorColor: Colors.black,
+                cursorColor: Colors.pink,
               ),
             ),
 
