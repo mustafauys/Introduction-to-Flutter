@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-mixin TextFieldIslemleri implements StatefulWidget {
+class TextFieldIslemleri extends StatefulWidget {
   @override
   _TextFieldIslemleriState createState() => _TextFieldIslemleriState();
 }
@@ -96,7 +96,7 @@ class _TextFieldIslemleriState extends State<TextFieldIslemleri> {
                   debugPrint("On Submit: $s");
                   girilenMetin=s;
                 },
-                cursorColor: Colors.pink,
+                cursorColor: Colors.black,
               ),
             ),
 
