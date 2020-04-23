@@ -130,7 +130,7 @@ class _TextFieldIslemleriState extends State<TextFieldIslemleri> {
             ),
 
             Container(
-        margin: EdgeInsets.all(8),
+        margin: EdgeInsets.all(10),
         width: double.infinity,
         height: 200,
         color: Colors.teal.shade400,
