@@ -49,8 +49,8 @@ class FormveTextFormField extends StatefulWidget{
               obscureText: true,
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.email),
-                hintText: "Şifreniz",
-                labelText: "Şifre",
+                hintText: "",
+                labelText: "",
                 border: OutlineInputBorder(),
                 //enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
                 //focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
