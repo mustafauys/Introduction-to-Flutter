@@ -59,7 +59,7 @@ class FormveTextFormField extends StatefulWidget{
             SizedBox(height: 10,),
             RaisedButton.icon(
               icon: Icon(Icons.save),
-              label: Text("KAYDET"),
+              label: Text(""),
               color: Colors.blueAccent,
               disabledColor: Colors.amber,
               onPressed: () {
