@@ -52,14 +52,14 @@ class FormveTextFormField extends StatefulWidget{
                 hintText: "Şifreniz",
                 labelText: "Şifre",
                 border: OutlineInputBorder(),
-                //enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
-                //focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
+                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
+                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
               ),
             ),
             SizedBox(height: 10,),
             RaisedButton.icon(
               icon: Icon(Icons.save),
-              label: Text("KAYDET"),
+              label: Text(""),
               color: Colors.blueAccent,
               disabledColor: Colors.amber,
               onPressed: () {
