@@ -56,7 +56,7 @@ class FormveTextFormField extends StatefulWidget{
                 //focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 20,),
             RaisedButton.icon(
               icon: Icon(Icons.save),
               label: Text("KAYDET"),
