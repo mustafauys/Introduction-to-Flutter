@@ -105,7 +105,7 @@ class FormveTextFormField extends StatefulWidget{
         debugPrint("Girilen mail: $_emailAdres sifre: $_sifre adsoyad: $_adsoyad");
       } else {
         setState(() {
-          otomatikKontol = false;
+          otomatikKontol = true;
         });
         
       }
