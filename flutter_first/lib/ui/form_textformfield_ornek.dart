@@ -100,7 +100,7 @@ class FormveTextFormField extends StatefulWidget{
     void _girisBilgileriniOnayla(){
 
       if(formKey.currentState.validate()) {
-        
+        formKey.currentState.save();
 
         debugPrint("Girilen mail: $_emailAdres sifre: $_sifre adsoyad: $_adsoyad");
       } else {
