@@ -80,7 +80,13 @@ class FormveTextFormField extends StatefulWidget{
               },
               onSaved: (deger) => _sifre = deger,
             ),
-            
+            SizedBox(height: 10,),
+            RaisedButton.icon(
+              icon: Icon(Icons.save),
+              label: Text("KAYDET"),
+              color: Colors.blueAccent,
+              disabledColor: Colors.amber,
+              onPressed: _girisBilgileriniOnayla,
               
               
             )
