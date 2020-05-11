@@ -54,8 +54,8 @@ class FormveTextFormField extends StatefulWidget{
                 hintText: "Email Adresiniz",
                 labelText: "Email",
                 border: OutlineInputBorder(),
-                //enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
-                //focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
+                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
+                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
               ),
               validator: _emailKontrol,
               onSaved: (deger) => _emailAdres = deger,
@@ -70,8 +70,8 @@ class FormveTextFormField extends StatefulWidget{
                 hintText: "Şifreniz",
                 labelText: "Şifre",
                 border: OutlineInputBorder(),
-                //enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
-                //focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
+                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
+                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, width: 2)),
               ),
               validator: (String girilenVeri) {
                 if (girilenVeri.length < 6) {
@@ -83,7 +83,7 @@ class FormveTextFormField extends StatefulWidget{
             SizedBox(height: 10,),
             RaisedButton.icon(
               icon: Icon(Icons.save),
-              label: Text("KAYDET"),
+              label: Text(""),
               color: Colors.blueAccent,
               disabledColor: Colors.amber,
               onPressed: _girisBilgileriniOnayla,
