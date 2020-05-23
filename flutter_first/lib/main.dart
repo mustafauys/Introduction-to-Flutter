@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/ui/custom_scroll_ve_slivers.dart';
+import 'package:flutter_first/ui/diger_form_elemanlari.dart';
 import 'package:flutter_first/ui/etkin_liste.dart';
 import 'package:flutter_first/ui/form_textformfield_ornek.dart';
 import 'package:flutter_first/ui/grid_view_kullanimi.dart';
 import 'package:flutter_first/ui/navigasyon_islemleri.dart';
 import 'package:flutter_first/ui/text_field_ozellikleri.dart';
+
 import 'ui/liste.dart';
 
 void main() {
   runApp(MaterialApp(
       title: "Flutter Öğren",
       
-      initialRoute: "/textFormField",
+      initialRoute: "/digerFormElemanlari",
 
       routes: {
         '/'      : (context) => NavigasyonIslemleri(),
         '/textFieldIslemleri' : (context) => TextFieldIslemleri(),
         '/textFormField' : (context) => FormveTextFormField(),
+        '/digerFormElemanlari' : (context) => DigerFormElemanlari(),
         'CPage' : (context) => CSayfasi(),
         '/DPage' : (context) => DSayfasi(),
         '/GPage' : (context) => GSayfasi(),
@@ -43,4 +46,7 @@ void main() {
       ),
       //home: NavigasyonIslemleri(),
   ));
+}
+
+class DigerFormElemanlari {
 }
