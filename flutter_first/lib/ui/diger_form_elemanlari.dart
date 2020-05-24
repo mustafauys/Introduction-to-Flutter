@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class DigerFormElemanlari extends StatefulWidget {
+class DigerFormElemanlarii extends StatefulWidget {
   @override
   _DigerFormElemanlariState createState() => _DigerFormElemanlariState();
 }
 
-class _DigerFormElemanlariState extends State<DigerFormElemanlari> {
+class _DigerFormElemanlariState extends State<DigerFormElemanlarii> {
   bool checkBoxState = false;
   String sehir = "";
   bool switchState = false;
@@ -41,6 +41,7 @@ class _DigerFormElemanlariState extends State<DigerFormElemanlari> {
               secondary: Icon(Icons.add),
               selected: true,
             ),
+
             RadioListTile<String>(
               value: "Ankara",
               groupValue: sehir,
