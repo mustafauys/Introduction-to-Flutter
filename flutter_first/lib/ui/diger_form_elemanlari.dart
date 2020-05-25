@@ -5,14 +5,6 @@ class DigerFormElemanlarii extends StatefulWidget {
   _DigerFormElemanlariState createState() => _DigerFormElemanlariState();
 }
 
-class _DigerFormElemanlariState extends State<DigerFormElemanlarii> {
-  bool checkBoxState = false;
-  String sehir = "";
-  bool switchState = false;
-  double sliderDeger = 10;
-  String secilenRenk = "Kirmizi";
-  List<String> sehirler = ["Ankara", "Bursa", "Izmir", "Hatay"];
-  String secilenSehir="Ankara";
 
   @override
   Widget build(BuildContext context) {
