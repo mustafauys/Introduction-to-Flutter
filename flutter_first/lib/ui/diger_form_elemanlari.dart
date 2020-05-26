@@ -11,7 +11,7 @@ class _DigerFormElemanlariState extends State<DigerFormElemanlarii> {
   bool switchState = false;
   double sliderDeger = 10;
   String secilenRenk = "Kirmizi";
-  List<String> sehirler = ["Ankara", "Bursa", "Izmir", "Hatay"];
+  List<String> sehirler = ["Ankara", "Bursa", "Amasya", "İstanbul"];
   String secilenSehir="Ankara";
 
   @override
