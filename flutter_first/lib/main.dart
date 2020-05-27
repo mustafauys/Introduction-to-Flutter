@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/ui/custom_scroll_ve_slivers.dart';
+import 'package:flutter_first/ui/date_time_picker.dart';
 import 'package:flutter_first/ui/etkin_liste.dart';
 import 'package:flutter_first/ui/form_textformfield_ornek.dart';
 import 'package:flutter_first/ui/grid_view_kullanimi.dart';
@@ -13,13 +14,14 @@ void main() {
   runApp(MaterialApp(
       title: "Flutter Öğren",
       
-      initialRoute: "/digerFormElemanlari",
+      initialRoute: "/tarihSaat",
 
       routes: {
         '/'      : (context) => NavigasyonIslemleri(),
         '/textFieldIslemleri' : (context) => TextFieldIslemleri(),
         '/textFormField' : (context) => FormveTextFormField(),
         '/digerFormElemanlari' : (context) => DigerFormElemanlarii(),
+        '/tarihSaat' : (context) => TarihSaatOrnek(),
         'CPage' : (context) => CSayfasi(),
         '/DPage' : (context) => DSayfasi(),
         '/GPage' : (context) => GSayfasi(),
