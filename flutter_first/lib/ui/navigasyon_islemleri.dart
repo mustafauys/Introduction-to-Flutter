@@ -91,6 +91,14 @@ class NavigasyonIslemleri extends StatelessWidget {
                       Navigator.pushNamed(context, "/digerFormElemanlari");
                     },
                   ),
+
+                  RaisedButton(
+                    child: Text("Date Time Picker"),
+                    color: Colors.pink,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/tarihSaat");
+                    },
+                  ),
           ],
         ),),
         ),);
