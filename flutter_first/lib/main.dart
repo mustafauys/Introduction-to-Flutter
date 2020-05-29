@@ -5,6 +5,7 @@ import 'package:flutter_first/ui/etkin_liste.dart';
 import 'package:flutter_first/ui/form_textformfield_ornek.dart';
 import 'package:flutter_first/ui/grid_view_kullanimi.dart';
 import 'package:flutter_first/ui/navigasyon_islemleri.dart';
+import 'package:flutter_first/ui/stepper_kullanimi.dart';
 import 'package:flutter_first/ui/text_field_ozellikleri.dart';
 import 'package:flutter_first/ui/diger_form_elemanlari.dart';
 
@@ -14,7 +15,7 @@ void main() {
   runApp(MaterialApp(
       title: "Flutter Öğren",
       
-      initialRoute: "/tarihSaat",
+      initialRoute: "/stepper",
 
       routes: {
         '/'      : (context) => NavigasyonIslemleri(),
@@ -22,6 +23,7 @@ void main() {
         '/textFormField' : (context) => FormveTextFormField(),
         '/digerFormElemanlari' : (context) => DigerFormElemanlarii(),
         '/tarihSaat' : (context) => TarihSaatOrnek(),
+        '/stepper' : (context) => StepperOrnek(),
         'CPage' : (context) => CSayfasi(),
         '/DPage' : (context) => DSayfasi(),
         '/GPage' : (context) => GSayfasi(),
