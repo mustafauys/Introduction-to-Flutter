@@ -70,15 +70,7 @@ class _StepperOrnekState extends State<StepperOrnek> {
       ),
       ),
 
-      Step(
-      title: Text("Mail başlık"),
-      subtitle: Text("Mail Altbaşlık"),
-      state: StepState.error,
-      isActive: true,
-       content: TextFormField(
-        decoration: InputDecoration(labelText: "MailLabel", hintText: "MailHint", border: OutlineInputBorder()),
-      ),
-      ),
+      
 
 Step(
       title: Text("Şifre başlık"),
