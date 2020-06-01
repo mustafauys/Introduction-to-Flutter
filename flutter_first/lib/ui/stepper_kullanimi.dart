@@ -44,7 +44,7 @@ class _StepperOrnekState extends State<StepperOrnek> {
                 RaisedButton(
                   color: Colors.pink,
                   onPressed: onStepCancel,
-                  child: const Text(''),
+                  child: const Text('Geri Gel!'),
                 ),
               ],
             );
