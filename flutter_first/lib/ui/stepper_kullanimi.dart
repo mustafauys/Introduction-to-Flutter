@@ -168,7 +168,15 @@ class _StepperOrnekState extends State<StepperOrnek> {
         }
         break;
 
-     
+      case 1:
+        if (key1.currentState.validate()) {
+          key1.currentState.save();
+          hata = false;
+          _aktifStep = 2;
+        } else {
+          hata = true;
+        }
+        break;
 
       case 2:
         if (key2.currentState.validate()) {
