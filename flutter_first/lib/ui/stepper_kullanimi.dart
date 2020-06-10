@@ -156,7 +156,41 @@ class _StepperOrnekState extends State<StepperOrnek> {
       return StepState.complete;
   }
 
-  
+  void _ileriButonuKontrolu() {
+    switch (_aktifStep) {
+      case 0:
+        if (key0.currentState.validate()) {
+          key0.currentState.save();
+          hata = false;
+          _aktifStep = 1;
+        } else {
+          hata = true;
+        }
+        break;
+
+      case 1:
+        if (key1.currentState.validate()) {
+          key1.currentState.save();
+          hata = false;
+          _aktifStep = 2;
+        } else {
+          hata = true;
+        }
+        break;
+
+      case 2:
+        if (key2.currentState.validate()) {
+          key2.currentState.save();
+          hata = false;
+          _aktifStep = 2;
+          formTamamlandi();
+        } else {
+          hata = true;
+        }
+        break;
+
+    }
+  }
 
   void formTamamlandi() {
     debugPrint("Girilen değerler : isim=>$isim mail=>$mail şifre=>$sifre");
