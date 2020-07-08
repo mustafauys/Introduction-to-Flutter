@@ -49,7 +49,7 @@ class _TarihSaatOrnekState extends State<TarihSaatOrnek> {
                                 },
                               ),
                               RaisedButton(
-                                child: Text("Saat Seç"),
+                                child: Text(""),
                                 color: Colors.blue,
                                 onPressed: () {
                                   showTimePicker(context: context, initialTime: suankiSaat).then((secilenSaat){
