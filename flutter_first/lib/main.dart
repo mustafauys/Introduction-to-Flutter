@@ -18,7 +18,7 @@ void main() {
       initialRoute: "/stepper",
 
       routes: {
-        ''      : (context) => NavigasyonIslemleri(),
+        '/'      : (context) => NavigasyonIslemleri(),
         '/textFieldIslemleri' : (context) => TextFieldIslemleri(),
         '/textFormField' : (context) => FormveTextFormField(),
         '/digerFormElemanlari' : (context) => DigerFormElemanlarii(),
