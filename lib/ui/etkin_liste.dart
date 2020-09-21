@@ -104,7 +104,7 @@ class EtkinListe extends StatelessWidget {
   }
 }
 
- {
+class Ogrenci {
   String _isim;
   String _aciklama;
   bool _cinsiyet;
