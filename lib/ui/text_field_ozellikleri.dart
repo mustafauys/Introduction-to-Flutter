@@ -7,27 +7,7 @@ class TextFieldIslemleri extends StatefulWidget {
 
 class _TextFieldIslemleriState extends State<TextFieldIslemleri> {
 
-  String girilenMetin= "";
-  int maxLine = 1;
-  FocusNode _fNode;
-  TextEditingController textController1;
-
-  @override
-  void initState() {
-    super.initState();
-    _fNode=FocusNode();
-    textController1 = TextEditingController(text: "Varsayılan");
-    _fNode.addListener(() {
-        setState(() {
-       if(_fNode.hasFocus) {
-        maxLine = 3;
-    } else {
-      maxLine = 1;
-    }
-
-    });
-    });
-  }
+ 
 
   @override
   void dispose() {
