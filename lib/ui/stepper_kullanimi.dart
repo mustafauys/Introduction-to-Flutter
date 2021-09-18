@@ -17,7 +17,7 @@ class _StepperOrnekState extends State<StepperOrnek> {
 
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
   }
 
