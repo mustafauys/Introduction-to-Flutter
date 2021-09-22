@@ -20,7 +20,7 @@ class EtkinListe extends StatelessWidget {
           }
         },
         itemCount: 20,
-        //itemBuilder: (context, index) => Card(),
+        
         itemBuilder: (context, index) {
           return Card(
             color:
